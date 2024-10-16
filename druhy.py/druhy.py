@@ -3,7 +3,7 @@ def cislo_text(cislo):
     # napr: "25" -> "dvacet pět", omezte se na cisla od 0 do 100
     cislo = int(cislo)
     jednotky = ["nula", "jedna", "dva", "tři", "čtyři", "pět", "šest", "sedm", "osm", "devět"]
-    desítky = ["dvacet", "třicet", "čtyřicet", "padesát", "šedesát", "sedmdesát", "osmdesát", "devadesát"]
+    desítky = ["", "deset", "dvacet", "třicet", "čtyřicet", "padesát", "šedesát", "sedmdesát", "osmdesát", "devadesát"]
     desetazdvacet = ["deset", "jedenáct", "dvanáct", "třináct", "čtrnáct", "patnáct", "šestnáct", "sedmnáct", "osmnáct", "devatenáct"]
 
     if cislo < 10:
