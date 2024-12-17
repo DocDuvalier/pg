@@ -13,3 +13,7 @@
 pip install lxml
 
 ls
+
+pip install pytest
+
+pytest
