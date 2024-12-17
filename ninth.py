@@ -48,3 +48,5 @@ def test_bin_to_dec():
 if __name__ == "__main__":
     print(dec_to_bin(120))
     test_bin_to_dec()
+
+#pytest ninth.py

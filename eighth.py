@@ -1,11 +1,10 @@
 def bin_to_dec(binarni_cislo):
     # funkce spocita hodnotu predavaneho binarniho cisla (binarni_cislo muze byt str i int!!!)
     # 111 -> 7
-    # "101" -> 5 
-
+    # "101" -> 5
     binarni_cislo = str(binarni_cislo)
-
     return int(binarni_cislo, 2)
+
 
 def test_bin_to_dec():
     assert bin_to_dec("0") == 0
@@ -15,11 +14,7 @@ def test_bin_to_dec():
     assert bin_to_dec("010101") == 21
     assert bin_to_dec(10000000) == 128
 
+# Testování
 if __name__ == "__main__":
     test_bin_to_dec()
     print("Všechny testy proběhly úspěšně!")
-
-
-print(bin_to_dec("10011101"))  # Výstup: 157
-print(bin_to_dec(1010))        # Výstup: 10
-print(bin_to_dec("111"))       # Výstup: 7
