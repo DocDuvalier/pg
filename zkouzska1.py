@@ -9,6 +9,8 @@
 #kontrola Stop H
 #filtrace a transformace retezcu H
 #vraceni vysledku H
+#    s = "text"
+#    s.upper()
 
 def process_strings(strings):
     result = []
