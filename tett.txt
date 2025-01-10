@@ -1,0 +1,52 @@
+Python ukol - splň správně zadání a vysvětli své kroky
+# Příklad 3: Základy OOP (dědičnost, abstrakce, zapouzdření)
+# Zadání:
+# Vytvořte dvě podtřídy třídy `Shape`: `Rectangle` a `Circle`.
+# - `Rectangle` má atributy `width` a `height` a implementuje metodu `area`.
+# - `Circle` má atribut `radius` a implementuje metodu `area`.
+
+
+class Shape():
+
+    def area(self):
+        return 0.0
+
+# ZDE DOPLŇTE VLASTNÍ KÓD
+
+from unittest.mock import patch, MagicMock, mock_open
+
+# Pytest testy pro Příklad 3
+def test_shapes():
+    rect = Rectangle(4, 5)
+    assert rect.area() == 20
+
+    circle = Circle(3)
+    assert round(circle.area(), 1) == 28.3
+
+--------------
+
+import math
+
+class Shape:
+    def area(self):
+        """Abstraktní metoda, která bude implementována v podtřídách."""
+        return 0.0
+
+class Rectangle(Shape):
+    def __init__(self, width, height):
+        """Inicializace atributů šířky a výšky."""
+        self.width = width
+        self.height = height
+
+    def area(self):
+        """Vypočítá plochu obdélníku: šířka * výška."""
+        return self.width * self.height
+
+class Circle(Shape):
+    def __init__(self, radius):
+        """Inicializace atributu poloměru."""
+        self.radius = radius
+
+    def area(self):
+        """Vypočítá plochu kruhu: π * poloměr^2."""
+        return math.pi * (self.radius ** 2)

@@ -17,3 +17,10 @@ ls
 pip install pytest
 
 pytest
+
+
+
+---------------
+
+    s = "text"
+    s.upper()
