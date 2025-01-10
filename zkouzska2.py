@@ -8,10 +8,41 @@
 # 4. Funkce vrátí výslednou částku v CZK zaokrouhlenou na dvě desetinná místa.
 # Pokud zadaná měna v kurzovním lístku neexistuje, vyhoďte výjimku `ValueError`.
 
+#data z url - Stáhneme data z kurzovního lístku
+#zpracovani obsahu - # Ověříme, že byl požadavek úspěšný     # Získáme textový obsah odpovědi     # Rozdělíme obsah na jednotlivé řádky
+#nacteni kurzu a overenei kurzu -     # Prohledáme řádky, kde jsou uvedeny kurzy - # Přeskočíme první dva řádky (datum a hlavičku tabulky)  
+# # Ujistíme se, že řádek má dostatek sloupců
+#vypocet castky - # Získáme kód měny, množství a kurz             # Převedeme kurz a množství na čísla             # Vypočítáme výslednou částku v CZK
+#vyjimka     # Pokud měna nebyla nalezena, vyhodíme výjimku
+
 import requests
 
 def convert_to_czk(amount, currency):
-    pass
+    url = "http://www.cnb.cz/cs/financni_trhy/devizovy_trh/kurzy_devizoveho_trhu/denni_kurz.txt"
+    response = requests.get(url)
+   
+    if not response.ok:
+        raise Exception("Nepovedlo se")
+
+    data = response.text
+
+    lines = data.splitlines()
+
+    for line in lines[2:]: 
+        fields = line.split('|')
+        if len(fields) < 5:
+            continue
+
+        country, currency_name, amount_in_rate, code, rate = fields
+
+        if code == currency:
+            rate = float(rate.replace(',', '.'))
+            amount_in_rate = int(amount_in_rate)
+
+            result = amount * (rate / amount_in_rate)
+            return round(result, 2)
+
+    raise ValueError(f"Měna {currency} nebyla našlá")
 
 # Pytest testy pro Příklad 3
 from unittest.mock import patch, MagicMock
