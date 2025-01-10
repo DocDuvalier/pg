@@ -4,10 +4,10 @@
 # Funkce vrátí nový seznam, který obsahuje pouze řetězce delší než 3 znaky, převedené na velká písmena.
 # Pokud seznam obsahuje řetězec "STOP", ukončete zpracování seznamu a vraťte dosud vytvořený seznam.
 
-#vyt seznam - retezce H
+#vyt seznam - ulozen retezce H
 #iterace pres seznam H
 #kontrola Stop H
-#filtrace a transformace retezcu H
+#filtrace a transformace retezcu na upper H
 #vraceni vysledku H
 #    s = "text"
 #    s.upper()
