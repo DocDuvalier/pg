@@ -4,39 +4,40 @@
 # - `Rectangle` má atributy `width` a `height` a implementuje metodu `area`.
 # - `Circle` má atribut `radius` a implementuje metodu `area`.
 
-import math
-
-class Shape:
     #Abstraktní třída Shape, která definuje základní strukturu pro geometrické tvary.
-    def area(self):
         #Abstraktní metoda, která bude implementována v podtřídách.
         #Abstraktní metoda, kterou musí implementovat všechny podtřídy.
         #Vrací plochu daného tvaru.
+    #Třída Rectangle reprezentuje obdélník.
+        #Inicializace atributů šířky a výšky.
+        #Inicializace obdélníku se šířkou a výškou.
+        #Vypočítá plochu obdélníku: šířka * výška.
+        #Vypočítá a vrátí plochu obdélníku (šířka × výška).
+    #Třída Circle reprezentuje kruh.
+        #Inicializace atributu poloměru.
+        #Inicializace kruhu s poloměrem.
+    # pí krát radius na 2
+
+import math
+
+class Shape:
+    def area(self):
         return 0.0
 
 class Rectangle(Shape):
-    #Třída Rectangle reprezentuje obdélník.
+
     def __init__(self, width, height):
-        #Inicializace atributů šířky a výšky.
-        #Inicializace obdélníku se šířkou a výškou.
         self.width = width
         self.height = height
 
     def area(self):
-        #Vypočítá plochu obdélníku: šířka * výška.
-        #Vypočítá a vrátí plochu obdélníku (šířka × výška).
         return self.width * self.height
 
 class Circle(Shape):
-    #Třída Circle reprezentuje kruh.
     def __init__(self, radius):
-        #Inicializace atributu poloměru.
-        #Inicializace kruhu s poloměrem.
         self.radius = radius
 
     def area(self):
-        #Vypočítá plochu kruhu: π * poloměr^2.
-        #Vypočítá a vrátí plochu kruhu (π × poloměr²).
         return math.pi * (self.radius ** 2)
 
 
