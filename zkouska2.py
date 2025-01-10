@@ -41,7 +41,7 @@ def convert_to_czk(amount, currency):
             result = amount * (rate / amount_in_rate)
             return round(result, 2)
 
-    raise ValueError(f"Měna {currency} nebyla našlá")
+    raise ValueError(f"Currency {currency} not found in the exchange rate list.")
 
 # Pytest testy pro Příklad 3
 from unittest.mock import patch, MagicMock
