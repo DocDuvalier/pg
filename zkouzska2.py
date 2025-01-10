@@ -8,12 +8,11 @@
 # 4. Funkce vrátí výslednou částku v CZK zaokrouhlenou na dvě desetinná místa.
 # Pokud zadaná měna v kurzovním lístku neexistuje, vyhoďte výjimku `ValueError`.
 
-#data z url - Stáhneme data z kurzovního lístku
-#zpracovani obsahu - # Ověříme, že byl požadavek úspěšný     # Získáme textový obsah odpovědi     # Rozdělíme obsah na jednotlivé řádky
-#nacteni kurzu a overenei kurzu -     # Prohledáme řádky, kde jsou uvedeny kurzy - # Přeskočíme první dva řádky (datum a hlavičku tabulky)  
-# # Ujistíme se, že řádek má dostatek sloupců
-#vypocet castky - # Získáme kód měny, množství a kurz             # Převedeme kurz a množství na čísla             # Vypočítáme výslednou částku v CZK
-#vyjimka     # Pokud měna nebyla nalezena, vyhodíme výjimku
+#data z url - stahn data z kurzovního lístku H
+#zpracovani obsahu - muzu overit idk  -  ziska,m text (obsah odpovd)  pak rozdelm obsah na jednot radky H
+#nacteni kurzu a overenei kurzu -    první dva řádky mimo tab (datuma hlavatab) - skipnu pak tab - overit spravny pocet sloupcu v radku H
+#vypocet castky - ZIskAM kod meny, mnozství a kurz  - prevedeme kurz a mnozstvi na cisla - vypocitait v mene
+#vyjimka   - pokud mena nebyla nalezena - vyjímka
 
 import requests
 

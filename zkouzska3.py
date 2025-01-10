@@ -4,19 +4,10 @@
 # - `Rectangle` má atributy `width` a `height` a implementuje metodu `area`.
 # - `Circle` má atribut `radius` a implementuje metodu `area`.
 
-    #Abstraktní třída Shape, která definuje základní strukturu pro geometrické tvary.
-        #Abstraktní metoda, která bude implementována v podtřídách.
-        #Abstraktní metoda, kterou musí implementovat všechny podtřídy.
-        #Vrací plochu daného tvaru.
-    #Třída Rectangle reprezentuje obdélník.
-        #Inicializace atributů šířky a výšky.
-        #Inicializace obdélníku se šířkou a výškou.
-        #Vypočítá plochu obdélníku: šířka * výška.
-        #Vypočítá a vrátí plochu obdélníku (šířka × výška).
-    #Třída Circle reprezentuje kruh.
-        #Inicializace atributu poloměru.
-        #Inicializace kruhu s poloměrem.
-    # pí krát radius na 2
+#vytvorit abs třídu, která definuje základní strukturu pro geotvary H
+#podtridy implemetovat vsech - vrratit plochu daného tvaru H
+#1 podtr Rectangle = obdélník - Inicializace atributů šířky a výšky -Inicializace obdélníku (s š a v - vypocita plochu obdélníku: šířka * výška - vys H
+#2 podtr Circle = kruh - Inicializace atributu poloměru - Inicializace kruhu (s polo) - pí krát polo na 2 H
 
 import math
 
