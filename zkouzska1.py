@@ -4,11 +4,22 @@
 # Funkce vrátí nový seznam, který obsahuje pouze řetězce delší než 3 znaky, převedené na velká písmena.
 # Pokud seznam obsahuje řetězec "STOP", ukončete zpracování seznamu a vraťte dosud vytvořený seznam.
 
+#vyt seznam - retezce H
+#iterace pres seznam H
+#kontrola Stop H
+#filtrace a transformace retezcu H
+#vraceni vysledku H
+
 def process_strings(strings):
-    # ZDE NAPIŠTE VÁŠ KÓD
-    s = "text"
-    s.upper()
-    pass
+    result = []
+
+    for string in strings:
+        if string == "STOP":
+            break
+        if len(string) > 3:
+            result.append(string.upper())
+
+    return result
 
 # Pytest testy pro Příklad 2
 def test_process_strings():
